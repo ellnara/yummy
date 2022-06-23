@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section id="home">
+    <div class="container home-content">
+        <div class="row d-flex">
+            <div class="summary col-lg-6 col-sm-12">
+                <h2>Enjoy Your Healthy Delicious Food</h2>
+                <p>
+                    Sed autem laudantium dolores. Voluptatem itaque ea consequatur
+                    eveniet. Eum quas beatae cumque eum quaerat.
+                </p>
+                <div class="home-buttons d-flex">
+                    <button>Book a Table</button>
+                    <a href="">
+                        <i class="bi bi-play-circle"></i>
+                        <span>Watch Video</span>
+                    </a>
+                </div>
+            </div>
+            <div class="enjoy-image col-lg-6 col-sm-12">
+                <img src="./assets/images/hero-img.png" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<section id="menu">
+    <div class="container">
+        <div class="menu-context">
+            <div class="heading">
+                <span>OUR MENU</span>
+                <h2>Check Our <span>Yummy Menu</span></h2>
+                <ul class="menu-filter">
+                    <li><a href="">Starters</a></li>
+                    <li><a href="">Breakfast</a></li>
+                    <li><a href="">Lunch</a></li>
+                    <li><a href="">Dinner</a></li>
+                </ul>
+                <span>MENU</span>
+                <h3>Starters</h3>
+            </div>
+        </div>
+        <div class="menu-foods">
+            <div class="row">
+                @foreach (var food in Model.Food)
+                {
+                    <div class="foods">
+                        <img src="./assets/images/@food.ImageUrl" alt="" />
+                        <div class="food-info">
+                            <h4>@food.Name</h4>
+                            <p>@food.Description</p>
+                            <span>@food.Price</span>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+<section id="book">
+    <div class="container">
+        <div class="heading">
+            <span>BOOK A TABLE</span>
+            <h2>Book <span>Your Stay </span> With Us</h2>
+        </div>
+        <div class="book-table d-flex">
+            <div class="book-image">
+                <img src="./assets/images/reservation.jpg" alt="" />
+            </div>
+            <form action="">
+                <div class="row d-flex">
+                    <div class="">
+                        <input type="text" name="" id="" placeholder="Your Name" />
+                    </div>
+                    <div class="">
+                        <input type="email" name="" id="" placeholder="Your Email" />
+                    </div>
+                    <div class="">
+                        <input type="text" name="" id="" placeholder="Your  Phone" />
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="">
+                        <input type="text" name="" id="" placeholder="Date" />
+                    </div>
+                    <div class="">
+                        <input type="text" name="" id="" placeholder="Time" />
+                    </div>
+                    <div class="">
+                        <input type="text" name="" id="" placeholder="# of people" />
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <input class="message"
+                           type="text"
+                           name=""
+                           id=""
+                           placeholder="Message" />
+                </div>
+                <button>BOOK A TABLE</button>
+            </form>
+        </div>
+    </div>
+</section>

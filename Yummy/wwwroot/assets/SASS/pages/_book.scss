@@ -1,0 +1,35 @@
+#book {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 50px 0;
+  .book-table {
+    justify-content: center;
+    width: fit-content;
+    .book-image {
+      padding: 0;
+      margin: 0;
+      img {
+        max-width: 432px;
+        height: 500px;
+      }
+    }
+  }
+  .message {
+    width: 100%;
+    padding: 30px;
+  }
+
+  form {
+    background-color: #f8f9fa;
+    padding: 45px 60px;
+    .row {
+      width: 100%;
+    }
+    input {
+      padding: 10px 30px;
+      margin: 10px;
+      border: 1px solid rgba(128, 128, 128, 0.192);
+    }
+  }
+}
